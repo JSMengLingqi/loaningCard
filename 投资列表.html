@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>投资列表</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<style>
+	 body{font-family: "微软雅黑";background-color:rgb(240,240,240); }     
+   .container{padding:0px;}
+   nav{background-color: rgb(53,59,72);margin-bottom: 0px;}
+   .navbar{border-radius: 0;z-index: 999;}
+   .navbar-brand{padding-top: 0;}
+   .navbar-right{margin-top: 13px;}
+   .nav li a{color: rgb(221,221,221);}
+   .nav .active a{color: #fff;background-color: rgb(182,87,0);}
+   .nav li a:hover{background-color: rgb(182,87,0);color: #fff;}
+   .navbar-link{color: rgb(221,221,221);}
+   #main-nav li:hover .navbar-link{color: #fff;} 
+   .navbar-nav{margin-left: 25%;}
+   #bm1{color: rgb(182,87,0);border-color:rgb(182,87,0);}
+   .navbar-collapse
+   {
+    line-height: 100%;height: 100%;
+   }
+   @media screen and (max-width: 768px)
+   {
+    .navbar-brand img
+    {
+        width: 90px;
+        height: 80px;
+    }
+    .navbar-nav
+    {
+        margin-left: 0;
+    }
+
+   }
+   @media screen and (max-width: 1200px)
+   {
+    .navbar-nav{margin-left: 0;}
+   }
+	 .content-t{background-color:rgb(240,240,240);padding: 0px;border-bottom: 1px solid #ccc;}
+   .xiang{padding:0px;}
+   .mu{font-size: 1.35vw;color: rgb(189,94,1);font-weight: bold;}
+   .baa{padding: 0;margin-top: 2%;}
+   .baa1{margin-bottom: 3%;}
+   .wei{padding: 0;}
+   .lu{font-size: 14px;color: rgb(123,122,122);}
+   .btn-l{width: 96%;background-color: rgb(220,220,220);color: rgb(133,133,133);font-size: 14px;border-radius:1.4vw;}
+   .btn-l:hover{background-color: rgb(207,113,20);color:white;}
+   .btn-2{background-color: rgb(207,113,20);color:white;}
+   .btn-3{width: 130%;}
+   .btn-4{margin-left: 27%;}        
+	 .content-b{padding: 0px;}
+   .row{margin: 0;}
+   .row1{margin-top: 3%;}
+   .row2{background-color: white;width: 156%;border: 1px solid #ccc;}
+   .row2 img{margin-top: 5%;}
+   .row2 h5{font-size: 1.3vw;font-weight: bold;color: rgb(224,32,32);border-bottom: 1px dashed #ccc;padding-bottom: 6%;}
+   .row2 h6{text-align: left;font-size: 14px;font-weight: bold;color: rgb(136,136,136);padding-left: 13%;padding-top: 2%;}
+   .er{font-size: 1.3vw;color: rgb(224,32,32);font-weight: bold;}
+   .liu{font-size: 1.3vw;color: rgb(76,159,9);font-weight: bold;}
+   .yue{font-size: 1.3vw;color: rgb(93,93,93);font-weight: bold;}
+   .but{width: 73%;margin-left: 12.5%;background-color: rgb(224,94,24);color:white;font-size: 1.1vw;font-weight: bold;margin-bottom: 5%;}
+   .but:hover{color: white;}
+   .bas{padding-left: 47%;padding-top: 3%;}
+   .but1{width: 73%;margin-left: 12.5%;background-color: rgb(226,224,214);color:rgb(164,144,105);font-size: 1.1vw;font-weight: bold;margin-bottom: 5%;border:1px solid #ccc;}
+   .yim{display: inline-block;}
+   .row3{background:url(images/yimaner.png) no-repeat 95% 76%;background-size: 25% 23%;background-color: white;}
+   .roww{margin-top: 6%;}
+   .rowq{margin-top: 4%;margin-bottom: 5%;}
+   .btn-y{width: 100%;font-size: 13px;background-color: rgb(230,230,230);padding-bottom: 9%;padding-top: 9%;color: rgb(146,146,146);border:1px solid #ccc;}
+   .btn-s{width:40%;color: rgb(146,146,146);padding-bottom: 8%;padding-top: 8%;background-color: rgb(230,230,230);border:1px solid #ccc;}
+   .btn-ss{background-color: rgb(159,63,21);color: white;}
+   .pass{padding-right: 0px;padding-left: 0px;}
+   .passe{margin-left: 37.5%;}
+   .passr{margin-left: 50%;}
+   .passre{margin-left: 25%;}
+   .passree{margin-left: 50%;}
+   .passrre{margin-left: 25%;}
+   .btn-sse{margin-left: 50%;}
+   .btn-y:hover{background-color: rgb(159,63,21);color: white;}
+   .btn-s:hover{background-color: rgb(159,63,21);color: white;}
+   .dier{margin-bottom: 33px;}
+   .h4{margin-top: 30px;margin-bottom: 17px;}
+   .hezuo{background-color: rgb(53,59,72);border-bottom:1px solid rgb(71,77,89);width: 100%;}
+   .col-hz-1{width: 14%; padding-left: 15px; padding-right: 15px;float: left;}
+   .col-hz-1 img{width: 100%;height: 44px;}
+   .col-hz-1 img{border-radius: 4px;opacity: 0.3;}
+   .col-hz-1:hover img{opacity: 1;}
+   .bank1{padding-left: 0;}
+   .bank7{padding-right: 0;}
+   .footer{background-color:rgb(53,59,72);}
+   .footr{padding-top: 33px;padding-bottom: 33px;}
+   .footr img{margin-left: -15px;height: 65px;}
+   .foote{margin-top: 33px;font-size: 12px;}
+   .foote p{font-size: 1.2vw;}
+   .suan h1{font-size: 16px;color: #F67777;display: none;}
+   .btn-group{position: absolute;top:30%;display: none;}
+   .btn-group1{position: absolute;left: 103px;top:30%;display: none;}
+   .btn-group2{position: absolute;left: 208px;top:30%;display: none;}
+   .pagination1{position:relative;left: 9%;top: 5%;display: none;}
+   @media screen and (max-width: 768px)
+   {
+   /*下拉按钮*/
+    .content-t{display: none;}
+    .btn-group{display: block;}
+    .content-b{margin-top: 60%;}
+    .suan h1{display: block;}
+  /*下拉按钮*/
+  /*投资*/
+   .tu{margin-left:20%;}
+   .basq{margin-left: 30%;}
+   .ttu{margin-top:10%;}
+  /*投资*/
+  /*上一页*/
+   .rowq{display: none;}
+   .pagination1{display: block;margin-bottom:20%;}
+  /*上一页*/
+  /*合作银行*/
+   .col-hz-1{padding-left: 5px;padding-right: 5px;}
+   .col-hz-1 img{width: 100%;height: 20px;}
+   .bank1{padding-left: 0;}
+   .bank7{padding-right: 0;}
+   .col-hz-1 img{border-radius: 1px;}  
+   .dier{margin-bottom: 13px;}
+   .h4{margin-top: 10px;margin-bottom: 7px;font-size: 12px;}
+  /*合作银行*/
+  /*页脚*/
+   .foote p{display: none;}
+   .footr{padding-top: 10px;padding-bottom: 10px;}
+   .footr img{height: 30px;margin-left: -15px;}
+  /*页脚*/
+   }
+	</style>
+</head>
+<body>
+ <nav class="navbar">
+      <div class="container">
+        <!-- logo start -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="" style="padding-top: 10px;">
+            <img src="images/headpic2.png" >
+          </a>
+           <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+            <span class="glyphicon glyphicon-menu-hamburger">
+            </span>
+           </button>
+        </div>
+        <!-- logo end -->            
+        <!-- nav start -->
+        <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+           <a href="首页.html">首页</a>
+          </li>
+          <li  class="active">
+           <a href="">投资项目</a>
+          </li>
+          <li>
+           <a href="我要借款.html">我要借款</a>
+          </li>
+          <li>
+           <a href="关于我们.html">关于我们</a>
+          </li>
+          <li>
+           <a href="新闻公告.html">新闻公告</a>
+          </li>
+        </ul>
+        <ul class="list-unstyled list-inline navbar-right">
+          <li>
+           <img src="images/head-pic2.png" alt="">
+          </li>
+          <li>
+           <a href="登录.html" class="navbar-link">安全登录</a>
+          </li>
+           <li>
+            <a href="注册.html" class="btn btn-md btn-default" id="bm1">注册</a>
+           </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+<!-- 下拉 -->
+<div class="suan">
+ <h1>筛选项目</h1>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-success btn-sm">利率范围
+  </button>
+  <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+     <a href="#">不限</a>
+    </li>
+    <li>
+     <a href="#">1%-5%</a>
+    </li>
+    <li>
+     <a href="#">5%-10%</a>
+    </li>
+    <li>
+     <a href="#">10%-18%</a>
+    </li>
+    <li>
+     <a href="#">10%以上</a>
+    </li>
+  </ul>
+</div>
+<div class="btn-group btn-group1">
+  <button type="button" class="btn btn-danger btn-sm">借款期限
+  </button>
+  <button type="button" class="btn btn-danger dropdown-toggle btn-sm" data-toggle="dropdown">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+     <a href="#">不限</a>
+    </li>
+    <li>
+     <a href="#">1个月以下</a>
+    </li>
+    <li>
+     <a href="#">1-3个月</a>
+    </li>
+    <li>
+     <a href="#">3-12月</a>
+    </li>
+  </ul>
+</div>
+<div class="btn-group btn-group2">
+  <button type="button" class="btn btn-warning btn-sm">还款方式
+  </button>
+  <button type="button" class="btn btn-warning dropdown-toggle btn-sm" data-toggle="dropdown">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+     <a href="#">不限</a>
+    </li>
+    <li>
+     <a href="#">按月分期还款</a>
+    </li>
+    <li> 
+     <a href="#">一次性还款</a>
+    </li>
+    <li>
+     <a href="#">每月还息到期还本</a>
+    </li>
+  </ul>
+</div>
+<!-- 下拉 -->
+<div class="content-t">
+	<div class="container">
+    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 xiang">
+       <h1 class="mu">筛选项目</h1>
+    </div>
+<!--  利率 -->
+    <div class="row">
+     <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 baa">
+      <div class="col-xs-2  wei">
+       <h6 class="lu">利率范围</h6>
+      </div>
+      <div class="col-xs-2   col-xs-pull-1">
+        <button type="button" class="btn btn-block btn-l btn-2 " id="bgu">不限
+        </button>
+      </div>
+      <div class="col-xs-2  col-xs-pull-1">
+       <button type="button" class="btn btn-block btn-l" id="bgu1">1%-5%
+       </button>
+      </div>
+      <div class="col-xs-2  col-xs-pull-1">
+       <button type="button" class="btn btn-block btn-l" id="bgu2">5%-10%
+       </button>
+      </div>
+      <div class="col-xs-2  col-xs-pull-1">
+        <button type="button" class="btn btn-block btn-l" id="bgu3">10%-18%
+        </button>
+      </div>
+      <div class="col-xs-2  col-xs-pull-1">
+         <button type="button" class="btn btn-block btn-l">10%以上
+         </button>
+       </div>
+     </div>
+    </div>
+<!--  利率 -->
+<!-- 借款 -->
+    <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 baa">
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 wei">
+      <h6 class="lu">借款期限</h6>
+     </div>
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2  col-xs-pull-1">
+      <button type="button" class="btn btn-block btn-l btn-2">不限
+      </button>
+     </div>
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 col-xs-pull-1">
+      <button type="button" class="btn btn-block btn-l">1个月以下</button>
+     </div>
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 col-xs-pull-1">
+       <button type="button" class="btn btn-block btn-l">1-3个月</button>
+     </div>
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 col-xs-pull-1">
+      <button type="button" class="btn btn-block btn-l">3-12月
+      </button>
+     </div>
+    </div>
+<!-- 借款 -->
+<!--  还款-->
+    <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 baa baa1">
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 wei">
+       <h6 class="lu">还款方式</h6>
+     </div>
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2  col-xs-pull-1">
+       <button type="button" class="btn btn-block btn-l btn-2">不限
+       </button>
+     </div>
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 col-xs-pull-1 ">
+       <button type="button" class="btn btn-block btn-l btn-3">按月分期还款
+       </button>
+     </div>
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2 col-xs-pull-1">
+       <button type="button" class="btn btn-block btn-l btn-3  btn-4">一次性还款
+       </button>
+     </div>
+     <div class="col-xs-2 col-md-2 col-sm-2 col-lg-2">
+       <button type="button" class="btn btn-block btn-l btn-3 ">每月还息到期还本
+       </button>
+     </div>
+    </div>
+<!--  还款-->
+  </div>
+</div>
+<div class="content-b">
+	<div class="container">
+<!-- 第三 -->
+   <div class="row row1">
+    <div class="col-xs-6 col-md-2 text-center ">
+      <div class="row2 tu">
+       <img src="images/wu.png" alt="" height="25%" width="25%">
+       <h5>市值200万房屋抵押借款</h5>
+       <h6>借款金额：
+        <span class="er">5,000,000.00元</span>
+       </h6>
+       <h6>年化利率：
+        <span class="liu">16.00%</span>
+       </h6>
+       <h6>借款时间：
+        <span class="yue">3个月</span>
+       </h6>
+       <button type="button" class="btn btn-block but ">立即投资</button>
+      </div>
+       <img src="images/bashi.png" alt="" class="bas basq" height="80%" width="80%">
+     </div>
+     <div class="col-xs-6 col-md-2  text-center col-xs-offset-1 ">
+      <div class="row2 ttu">
+       <img src="images/wu.png" alt="" height="25%" width="25%">
+       <h5>市值200万房屋抵押借款</h5>
+       <h6>借款金额：
+        <span class="er">5,000,000.00元</span>
+       </h6>
+       <h6>年化利率：
+        <span class="liu">16.00%</span>
+       </h6>
+       <h6>借款时间：
+        <span class="yue">3个月</span>
+       </h6>
+       <button type="button" class="btn btn-block but ">立即投资</button>
+      </div>
+       <img src="images/bashi.png" alt="" class="bas" height="80%" width="80%">
+    </div>
+    <div class="col-xs-6 col-md-2  text-center col-xs-offset-1">
+     <div class="row2 ttu">
+      <img src="images/wu.png" alt="" height="25%" width="25%">
+      <h5>市值200万房屋抵押借款</h5>
+      <h6>借款金额：
+       <span class="er">5,000,000.00元</span>
+      </h6>
+      <h6>年化利率：
+       <span class="liu">16.00%</span>
+      </h6>
+      <h6>借款时间：
+       <span class="yue">3个月</span>
+      </h6>
+      <button type="button" class="btn btn-block but ">立即投资</button>
+     </div>
+      <img src="images/bashi.png" alt="" class="bas" height="80%" width="80%">
+   </div>
+   <div class="col-xs-6 col-md-2  text-center col-xs-offset-1">
+     <div class="row2 row3 ttu">
+      <img src="images/wu.png" alt="" height="25%" width="25%">
+      <h5>市值200万房屋抵押借款</h5>
+      <h6>借款金额：
+       <span class="er">5,000,000.00元</span>
+      </h6>
+      <h6>年化利率：
+       <span class="liu">16.00%</span>
+      </h6>
+      <h6>借款时间：
+       <span class="yue">3个月</span>
+      </h6>
+      <button type="button" class="btn btn-block but1 ">已完成</button>
+     </div>
+   </div>
+     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#roww">
+      <span class="glyphicon glyphicon-menu-hamburger"></span>
+     </button>
+  </div>
+<!-- 第三 -->
+<!-- 第四 -->
+<div id="roww">
+  <div class="row  row1">
+   <div class="col-xs-6 col-md-2  text-center">
+     <div class="row2 row3 tu">
+      <img src="images/wu.png" alt="" height="25%" width="25%">
+      <h5>市值200万房屋抵押借款</h5>
+      <h6>借款金额：
+       <span class="er">5,000,000.00元</span>
+      </h6>
+      <h6>年化利率：
+       <span class="liu">16.00%</span>
+      </h6>
+      <h6>借款时间：
+       <span class="yue">3个月</span>
+      </h6>
+      <button type="button" class="btn btn-block but1 ">已完成
+      </button>
+     </div>
+    </div>
+   <div class="col-xs-6 col-md-2  text-center col-xs-offset-1">
+    <div class="row2 row3 ttu">
+     <img src="images/wu.png" alt="" height="25%" width="25%">
+     <h5>市值200万房屋抵押借款</h5>
+     <h6>借款金额：
+      <span class="er">5,000,000.00元</span>
+     </h6>
+     <h6>年化利率：
+      <span class="liu">16.00%</span>
+     </h6>
+     <h6>借款时间：
+      <span class="yue">3个月</span>
+     </h6>
+     <button type="button" class="btn btn-block but1 ">已完成
+     </button>
+    </div>
+   </div>
+   <div class="col-xs-6 col-md-2  text-center col-xs-offset-1">
+    <div class="row2 row3 ttu">
+     <img src="images/wu.png" alt="" height="25%" width="25%">
+     <h5>市值200万房屋抵押借款</h5>
+     <h6>借款金额：
+      <span class="er">5,000,000.00元</span>
+     </h6>
+     <h6>年化利率：
+      <span class="liu">16.00%</span>
+     </h6>
+     <h6>借款时间：
+      <span class="yue">3个月</span>
+     </h6>
+     <button type="button" class="btn btn-block but1 ">已完成
+     </button>
+    </div>
+   </div>
+   <div class="col-xs-6 col-md-2  text-center col-xs-offset-1">
+    <div class="row2 row3 ttu">
+     <img src="images/wu.png" alt="" height="25%" width="25%">
+     <h5>市值200万房屋抵押借款</h5>
+     <h6>借款金额：
+      <span class="er">5,000,000.00元</span>
+     </h6>
+     <h6>年化利率：
+      <span class="liu">16.00%</span>
+     </h6>
+     <h6>借款时间：
+      <span class="yue">3个月</span>
+     </h6>
+     <button type="button" class="btn btn-block but1 ">已完成
+     </button>
+    </div>
+   </div>
+  </div>
+<!-- 第四 -->
+<!-- 第五 -->
+  <div class="row roww">
+   <div class="col-xs-6 col-md-2  text-center ">
+    <div class="row2 row3 tu">
+     <img src="images/wu.png" alt="" height="25%" width="25%">
+     <h5>市值200万房屋抵押借款</h5>
+     <h6>借款金额：
+      <span class="er">5,000,000.00元</span>
+     </h6>
+     <h6>年化利率：
+      <span class="liu">16.00%</span>
+     </h6>
+     <h6>借款时间：
+      <span class="yue">3个月</span>
+     </h6>
+     <button type="button" class="btn btn-block but1 ">已完成
+     </button>
+    </div>
+   </div>
+   <div class="col-xs-6 col-md-2  text-center col-xs-offset-1">
+     <div class="row2 row3 ttu">
+      <img src="images/wu.png" alt="" height="25%" width="25%">
+      <h5>市值200万房屋抵押借款</h5>
+      <h6>借款金额：
+       <span class="er">5,000,000.00元</span>
+      </h6>
+      <h6>年化利率：
+       <span class="liu">16.00%</span>
+      </h6>
+      <h6>借款时间：
+       <span class="yue">3个月</span>
+      </h6>
+      <button type="button" class="btn btn-block but1 ">已完成
+      </button>
+     </div>
+    </div>
+    <div class="col-xs-6 col-md-2  text-center col-xs-offset-1">
+     <div class="row2 row3 ttu">
+      <img src="images/wu.png" alt="" height="25%" width="25%">
+      <h5>市值200万房屋抵押借款</h5>
+      <h6>借款金额：
+       <span class="er">5,000,000.00元</span>
+      </h6>
+      <h6>年化利率：
+       <span class="liu">16.00%</span>
+      </h6>
+      <h6>借款时间：
+       <span class="yue">3个月</span>
+      </h6>
+      <button type="button" class="btn btn-block but1 ">已完成
+      </button>
+     </div>
+    </div>
+    <div class="col-xs-6 col-md-2 text-center col-xs-offset-1">
+     <div class="row2 row3 ttu">
+      <img src="images/wu.png" alt="" height="25%" width="25%">
+      <h5>市值200万房屋抵押借款</h5>
+      <h6>借款金额：
+       <span class="er">5,000,000.00元</span>
+      </h6>
+      <h6>年化利率：
+       <span class="liu">16.00%</span>
+      </h6>
+      <h6>借款时间：
+       <span class="yue">3个月</span>
+      </h6>
+      <button type="button" class="btn btn-block but1 ">已完成
+      </button>
+     </div>
+    </div>
+   </div>
+   </div>
+  </div>
+<!-- 第五 -->
+<ul class="pagination pagination1 pagination-sm">
+  <li>
+   <a href="#">上一页</a>
+  </li>
+  <li class="active">
+   <a href="#">1<span class="sr-only">(current)</span></a>
+  </li>
+  <li>
+   <a href="#">2</a>
+  </li>
+  <li>
+   <a href="#">3</a>
+  </li>
+  <li>
+   <a href="#">4</a>
+  </li>
+  <li> 
+   <a href="#">下一页</a>
+  </li>
+</ul>
+<!-- 下一页 --> 
+    <div class="row rowq">
+     <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-xs-push-4 pass " >
+      <button type="button" class="btn btn-block btn-y btn-yy passe">上一页
+      </button>
+     </div>
+     <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-xs-push-4 pass">
+      <button type="button" class="btn btn-block btn-s btn-ss btn-sse">1
+      </button>
+     </div>
+     <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-xs-push-4 pass">
+      <button type="button" class="btn btn-block btn-s btn-se ">2</button>
+     </div>
+     <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-xs-push-3 pass ">
+      <button type="button" class="btn btn-block btn-s passree">3</button>
+     </div>
+     <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-xs-push-3 pass ">
+      <button type="button" class="btn btn-block btn-s pusa ">4
+      </button>
+     </div>
+     <div class="col-xs-1 col-md-1 col-sm-1 col-lg-1 col-xs-push-2 pass">
+      <button type="button" class="btn btn-block btn-y passree">下一页
+      </button>
+     </div>
+    </div>
+ <!-- 下一页 -->
+  </div>
+</div>
+<div class="hezuo">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <h4 class="h4">合作伙伴</h4>
+      <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dier">
+        <div class="col-hz-1 bank1">
+         <a href=""><img src="images/bank1.png" alt="" />
+         </a>
+        </div>
+        <div class="col-hz-1 bank2">
+         <a href=""><img src="images/bank2.png" alt="" />
+         </a>
+        </div>
+        <div class="col-hz-1 bank3">
+         <a href=""><img src="images/bank3.png" alt="" />
+         </a>
+        </div>
+        <div class="col-hz-1 bank4">
+         <a href=""><img src="images/bank4.png" alt="" />
+         </a>
+        </div>
+        <div class="col-hz-1 bank5">
+         <a href=""><img src="images/bank5.png" alt="" />
+         </a>
+        </div>
+        <div class="col-hz-1 bank6">
+         <a href=""><img src="images/bank6.png" alt="" />
+         </a>
+        </div>
+        <div class="col-hz-1 bank7">
+         <a href=""><img src="images/bank7.png" alt="" />
+         </a>
+        </div>
+       </div>    
+      </div>    
+     </div>    
+    </div>
+  </div>    
+</div>
+<div class="footer">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 footr">
+      <a  href="">
+        <img src="images/foot.png" />
+      </a>
+     </div>
+     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right foote">
+       <p>Copyright @ 2014 上海XX金融信息服务有限公司版权所有 mingchedai.com All Right Reserved</p>
+       <p>沪ICP备14044994号-1</p> 
+     </div>
+    </div>
+   </div>
+  </div>
+</div>
+<!-- [if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+<![endif]-->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

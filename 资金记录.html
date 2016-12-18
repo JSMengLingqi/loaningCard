@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Document</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/header.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
+<link href="css/hezuo.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/资金记录.css">
+	<style type="text/css">
+	.c-right{background-color: #fff;}
+	.pagination{margin-bottom: 145px;}
+
+.pagination li a{margin-left: 10px;}
+.pagination li a{color: gray;background-color: rgb(245,245,245);}
+.pagination li a:hover{background-color: #cc6633;color: #fff;}
+.pagination .active2 a{background-color: #cc6633;color: #fff;}
+.a1{font-size: 12px;color: #999999;border:none;background-color: #fff;}
+.a2,.a3,.a4,.a5{border-radius: 10px;text-align: center;border:none;margin-right: 10px;width: 60px;}
+.a2{background-color: #cc6600;color: #fff;}
+.a3,.a4,.a5{background-color: rgb(235,235,235);color: gray;}
+.deh{margin-top: 10px;margin-bottom: 40px;}
+label{color: gray;margin-left: 20px;}
+input{width: 10%;background: url(images/riqi.png) no-repeat right;}
+.a6{background-color: #fff;margin-left: 10px;height: 27px;border-color: gray;}
+nav.navbar{padding-bottom: 0px; }
+td{text-align: center;}
+.sz{color: gray;}
+.tx span,.tz span,.cz span,.sy span{display: inline-block;width: 73px;height: 32px;border-radius: 16px;line-height: 32px;color: #fff;}
+.tx span{background-color: #cc6633;}
+.tz span{background-color: #3399cc;}
+.cz span{background-color: #669900;}
+.sy span{background-color: #cc6600;}
+.col-lg-3{padding-top: 0;margin-left: 30px;}
+.col-lg-3 .p1{color: #cc6633;font-size: 25px;}
+.col-lg-3 .p2{color: #cc9933;font-size: 14px;margin-left: 0;}
+.c-b p img{height: 10px;margin-left: 2px;}
+.top{margin-top: -33px;}
+.yc1{display: none;}
+.touxiang img{margin-left: 5px;}
+@media screen and (max-width: 768px)
+{.col-lg-3{padding-top: 0;margin-left: 5px;}
+.col-lg-3 .p1{color: #cc6633;font-size: 12px;}
+.col-lg-3 .p2{color: #cc9933;font-size: 12px;margin-left: 0;}
+.a1{font-size: 12px;color: #999999;border:none;background-color: #fff;}
+.a2,.a3,.a4,.a5{border-radius: 10px;border:none;margin-right: 5px;width: 60px;}
+.pagination li a{margin-left: 5px;}
+.content{margin-top: 22px;}
+.touxiang img{margin-left: 10px;}
+.yc1{display: block;}
+.yc2{display: none;}
+input{width: 100%;}
+label{margin-left: 0;}
+.pagination{margin-bottom: 40px;}
+.deh{margin-bottom: 0px;}
+.a-5{margin-left: 40px;}
+.c-right{margin-top: -20px;}
+
+
+}
+	</style>
+</head>
+<body>
+ <nav class="navbar">
+    	<div class="container">
+    		<!-- logo start -->
+    		<div class="navbar-header">
+    			<a class="navbar-brand" href="">
+    				<img src="images/logo.png" />
+    			</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+                <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+    		</div>
+    		<div id="main-nav" class="collapse navbar-collapse">
+    		<ul class="nav navbar-nav">
+    			<li class="active"><a href="">首页</a></li>
+    			<li><a href="">投资项目</a></li>
+    			<li><a href="">我要借款</a></li>
+    			<li><a href="">关于我们</a></li>
+    			<li><a href="">新闻公告</a></li>
+    		</ul>
+    		<ul class="list-unstyled list-inline navbar-right">
+    			<li><img src="images/head-pic2.png"></li>
+                <li><a href="" class="navbar-link">安全登录</a></li>
+                <li><a href="" class="btn btn-md btn-default">注册</a></li>
+            </ul>
+    	   </div>
+        </div>
+  </nav>
+<div class="content">
+	<div class="container">
+		<div class="c-left col-xs-2 col-sm-2 col-md-2 col-lg-2">
+			<div class="top row">
+				<div class="touxiang col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img src="images/touxinag.png">
+				</div>
+				<div class="mingzi col-xs-7 col-sm-7 col-md-7 col-lg-7">
+					<h4>你好</h4>
+					<h5>东厂胡一刀</h5>
+				</div>
+			</div>
+			<ul class="nav nav-stacked">
+				<li><a href="">我的账户</a></li>
+				<li><a href="">我的投资</a></li>
+				<li><a href="" class="active">资金记录</a></li>
+				<li><a href="">我的信息</a></li>
+				<li><a href="">自动投标</a></li>
+				<li><a href="">密码修改</a></li>
+			</ul>
+			<div class="c-b">
+			<p class="c-p-t">账户安全等级<span>低</span></p>
+			<p><img src="images/jindutiao.png" alt="" /></p>
+			</div>
+		</div>
+		<div class="c-right col-xs-10 col-sm-10 col-md-10 col-lg-10">
+			<div class="row c-r-t">
+				<div class="txt1 col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<h4>可用余额<span>1,000.00元</span></h4>
+				</div>
+				<div class="txt1 col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<h5>已获得<span>230.00元</span>收益</h5>
+				</div>
+				<div class="anniu col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right">
+					<button type="button" class="btn btn-danger active">充值</button>&nbsp;&nbsp;&nbsp;
+					  <button type="button" class="btn btn-default active">提现</button>
+				</div>
+			</div>
+			<div class="row">
+   <div class="col-lg-3 col-xs-3">
+     <p class="p2">共计提现</p>
+     <p class="p1">2578632.00元</p>
+   </div>
+   <div class="col-lg-3 col-xs-3">
+     <p class="p2">共计提现</p>
+     <p class="p1">2578632.00元</p>
+   </div>
+   <div class="col-lg-3 col-xs-3">
+     <p class="p2">共计提现</p>
+     <p class="p1">2578632.00元</p>
+   </div>
+ </div>
+  <div class="row">
+  <form class="form">
+  <div class="col-lg-12 dyh yc2">
+    <button type="submit" class="a1 btn"><strong>时间筛选</strong></button>
+    <button type="submit" class="a2 btn">全部</button>
+    <button type="submit" class="a3 btn">近七天</button>
+    <button type="submit" class="a4 btn">近一月</button>
+    <button type="submit" class="a5 btn">近三月</button>
+  </div>
+  <div class="col-lg-12 deh yc2">
+   <button type="submit" class="a1 btn"><strong>类型筛选</strong></button>
+    <button type="submit" class="a2 btn">全部</button>
+    <button type="submit" class="a3 btn">充值</button>
+    <button type="submit" class="a4 btn">提现</button>
+    <button type="submit" class="a5 btn">投资</button>
+    <button type="submit" class="a5 btn">收益</button>
+    <label>日期：</label>
+    <input type="datetime"></input>
+    <input type="datetime"></input>
+    <button type="submit" class="btn a6">提交</button>
+ </div>
+   <div class="col-lg-12 dyh yc1 col-xs-12">
+     <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+      <button type="submit" class="a1 btn"><strong>时间筛选</strong></button>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body text-justify">
+    <button type="submit" class="a2 btn">全部</button>
+    <button type="submit" class="a3 btn">近七天</button>
+    <button type="submit" class="a4 btn">近一月</button>
+    <button type="submit" class="a5 btn a-5">近三月</button>
+      </div>
+    </div>
+  </div>
+  
+
+  </div>
+  <div class="col-lg-12 deh yc1 col-xs-12">
+       <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1">
+     <button type="submit" class="a1 btn"><strong>类型筛选</strong></button>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne1" class="panel-collapse collapse in">
+      <div class="panel-body text-justify">
+    <button type="submit" class="a2 btn">全部</button>
+    <button type="submit" class="a3 btn">充值</button>
+    <button type="submit" class="a4 btn">提现</button>
+    <button type="submit" class="a5 btn">投资</button>
+    <button type="submit" class="a5 btn">收益</button>
+    <div class="row">
+    	<div class="col-xs-12">
+    		    <label>日期：</label>
+    <input type="datetime"></input>
+    <input type="datetime"></input>
+    <button type="submit" class="btn a6">提交</button>
+    	</div>
+    </div>
+
+      </div>
+    </div>
+  </div>
+   
+
+ </div>
+ </form>
+  </div>
+  <div class="row">
+  	<div class="col-lg-12 col-xs-12 bg yc2">
+  <table class="table" frame=void>
+  <div class="s1">
+    <tr>
+      <td frame=void>时间</td>
+      <td>类型</td>
+      <td>金额</td>
+      <td>状态</td>
+      <td>流水号</td>
+      <td>可用余额</td>
+    </tr>
+    </div>
+    <div class="s3">
+        <tr>
+      <td class="sz">2014-08-30 16:00:00</td>
+      <td class="tx"><strong><span>提 现</span></strong></td>
+      <td>20,000.00元</td>
+      <td><strong>成功</strong><img src="images/dui.png" alt="" /></td>
+      <td class="sz">126545687542315</td>
+      <td>100.00元</td>
+    </tr>
+    </div>
+    <div class="s3">
+        <tr>
+      <td class="sz">2014-08-30 16:00:00</td>
+      <td class="tz"><strong><span>投 资</span></strong></td>
+      <td>20,000.00元</td>
+      <td><strong>失败</strong><img src="images/cuo.png" alt="" /></td>
+      <td class="sz">126545687542315</td>
+      <td>100.00元</td>
+    </tr>
+    </div>
+    <div class="s3">
+        <tr>
+      <td class="sz">2014-08-30 16:00:00</td>
+      <td class="sy"><strong><span>收益</span></strong></td>
+      <td>20,000.00元</td>
+      <td><strong>成功</strong><img src="images/dui.png" alt="" /></td>
+      <td class="sz">126545687542315</td>
+      <td>100.00元</td>
+    </tr>
+    </div>
+    <div class="s3">
+        <tr>
+      <td class="sz">2014-08-30 16:00:00</td>
+      <td class="cz"><strong><span>充值</span></strong></td>
+      <td>20,000.00元</td>
+      <td><strong>成功</strong><img src="images/dui.png" alt="" /></td>
+      <td class="sz">126545687542315</td>
+      <td>100.00元</td>
+    </tr>
+    </div>
+  </table>
+  </div>
+<div class="col-lg-12 col-xs-12 bg yc1">
+
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne2">
+     	时间 2014-08-30 16:00:00
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne2" class="panel-collapse collapse in">
+      <div class="panel-body text-justify">
+    提 现
+      20,000.00元
+     成功<img src="images/dui.png" alt="" />
+      126545687542315
+      100.00元
+      </div>
+    </div>
+  </div>
+      <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne3">
+     	时间 2014-08-30 16:00:00
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne3" class="panel-collapse collapse in">
+      <div class="panel-body text-justify">
+    投 资
+      20,000.00元
+    失败<img src="images/cuo.png" alt="" />
+      126545687542315
+      100.00元
+      </div>
+    </div>
+  </div>
+      <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne4">
+     	时间 2014-08-30 16:00:00
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne4" class="panel-collapse collapse in">
+      <div class="panel-body text-justify">
+  收益
+      20,000.00元
+    成功<img src="images/dui.png" alt="" />
+      126545687542315
+      100.00元
+      </div>
+    </div>
+  </div>
+      <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne5">
+     	时间 2014-08-30 16:00:00
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne5" class="panel-collapse collapse in">
+      <div class="panel-body text-justify">
+    充值
+      20,000.00元
+     成功<img src="images/dui.png" alt="" />
+      126545687542315
+      100.00元
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-lg-6 col-lg-push-4 col-xs-12">
+	<ul class="pagination">
+  <li><a href="#">上一页</a></li>
+  <li class="active2"><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">下一页</a></li>
+</ul>
+	
+	</div>
+</div>
+</div>
+</div>
+
+
+
+
+	
+<div class="hezuo">
+	<div class="container">
+	<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<h4 class="h4">合作伙伴</h4>
+	<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dier">
+		<div class="col-hz-1 bank1"><a href=""><img src="images/bank1.png" alt="" /></a></div>
+		<div class="col-hz-1 bank2"><a href=""><img src="images/bank2.png" alt="" /></a></div>
+		<div class="col-hz-1 bank3"><a href=""><img src="images/bank3.png" alt="" /></a></div>
+		<div class="col-hz-1 bank4"><a href=""><img src="images/bank4.png" alt="" /></a></div>
+		<div class="col-hz-1 bank5"><a href=""><img src="images/bank5.png" alt="" /></a></div>
+		<div class="col-hz-1 bank6"><a href=""><img src="images/bank6.png" alt="" /></a></div>
+		<div class="col-hz-1 bank7"><a href=""><img src="images/bank7.png" alt="" /></a></div>
+	</div>		
+	</div>		
+	</div>		
+	</div>
+	</div>		
+</div>
+
+<div class="footer">
+	<div class="container">
+	<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<a  href="">
+				<img src="images/foot.png" />
+			</a>
+    	</div>
+    	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right">
+    		<p>Copyright @ 2014 上海XX金融信息服务有限公司版权所有 mingchedai.com All Right Reserved</p>
+    		<p>沪ICP备14044994号-1</p> 
+    	</div>
+    </div>
+	</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/html5shiv.min.js"></script>
+<script type="text/javascript" src="js/respond.min.js"></script>
+<![ endif]-->
+ <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

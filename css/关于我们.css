@@ -1,0 +1,296 @@
+.navbar-brand{
+	padding-top: 10px;
+}
+.btn{
+	background:none;
+	padding: 4px 20px;
+}
+.navbar-collapse
+{
+    line-height: 60px;
+}
+.zhu{
+	margin-left: -15%;
+}
+.navbar{
+	margin-bottom: 0;
+}
+@media screen and (max-width: 768px)
+{
+    .navbar-collapse
+    {
+        margin-top: 0px;
+    }
+    .zhu{
+	margin-left: 0;
+}
+}
+.banner img{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-color: #fff;
+}
+/*team开始*/
+.t-title h3{
+	font-size: 1.8vw;
+	color: #8b3914;
+	padding: 3% 0;	
+}
+.t-section{
+	background-color: #f4f4f4;
+	padding-left: 0;
+}
+.t-pic{
+	width: 16%;
+	padding-left: 0;
+}
+.t-pic img{
+	width: 100%;
+	height: 100%;
+}
+.t-txt{
+	width: 84%;
+	padding-top: 20px;
+}
+.t-txt h4{
+	font-size: 1.3vw;
+	font-weight: bold;
+	color: #8b3914;
+}
+.t-txt p{
+	font-size: 13px;
+	color: #707070;
+	line-height: 25px;
+}
+.t-section{
+	margin-top: 3%;
+}
+.t-zuo{
+	padding-left: 43%;
+}
+.t-you{
+	padding-right: 39%;
+}
+.t-zy{
+	margin: 4% 0;
+}
+/*picture开始*/
+.picture{
+	padding-top: 2%;
+	padding-bottom: 3%; 
+	background-color:#404859; 	
+}
+.picture .pic-line img{
+	width: 100%;
+	height: 100%;
+}
+.p-top h4{
+	font-size: 1.9vw;
+	color: #fff;
+	font-weight: bold;
+}
+.picture p{
+	font-size: 16px;
+	color: #fff;
+}
+.pic-pic{
+	margin-right:4.1%;
+}
+.pic-line{
+	margin-top: 2%;
+}
+/*problem开始*/
+.problem{
+	padding-top: 3%;
+	padding-bottom: 4%;
+}
+.problem img{
+	height: 80%;
+	width: 80%;
+}
+.problem h3{
+	font-size: 0.8vw;
+	color: #656464;
+	margin-top: 4%;
+	font-weight: bold;
+}
+.problem p{
+	font-size: 12px;
+	color: #7f7f7f;
+	margin-top: 5%;
+}
+.problem .p-img{
+	padding-right: 0;
+}
+.problem .p-text{
+	padding-left: 0;
+	padding-right: 0;
+}
+.pro-z{
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 5%;
+}
+.problem h2{
+	font-size: 1.8vw;
+	color: #8b3914;
+	font-weight: bold;
+	padding-bottom: 7%;
+	border-bottom: 1px solid #ddd;
+}
+.pro-title{
+	padding-left: 36%;
+	padding-right: 36%;
+}
+/*contact开始*/
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+.contact h1{
+	font-weight: bold;
+	font-size: 1.8vw;
+	color: #6c6b6b;
+}
+.contact h2{
+	font-size: 1.55vw;
+	color: #993e16;
+	padding-top: 13%;	 
+}
+
+.contact h3{
+	color: #636363;
+	font-size: 1.45vw;
+	padding-top: 13%;
+}
+
+.contact h4{
+	color: #565656;
+	font-size: 1vw;
+	padding-top: 12%;
+}
+
+.contact h5{
+	color: #565656;
+	font-size: 1vw;
+	padding-top: 10%;
+}
+.c-left{
+	padding-top: 1%;
+	padding-bottom: 2%;
+	background-color: #f1f1f1;
+	padding-left: 15%;
+}
+.con-z{
+	padding-left: 0;
+	padding-right: 0;
+}
+.c-left img{
+	padding-right: 4%;
+}
+.c-right{
+	padding-left: 0;
+	padding-right: 0;
+}
+.c-right{
+	/*background-image: url(images/map.png);
+	background-repeat: no-repeat;
+	background-size:cover;*/
+
+
+}
+/*footer开始*/
+.footer h5{
+	font-size: 16px;
+	color: #dfe2ea;
+}
+.f-title{
+	padding-top: 1%;
+}
+.bank{
+	width: 14.2%;
+}
+.bank-z{
+	padding-top: 1%;
+}
+.f-b{
+	padding-top: 5%;
+}
+.f-txt p{
+	text-align: right;
+	font-size: 12px;
+	color: #747779;
+}
+.footer{
+	background-color: #353b48;
+}
+.footer .bank img{
+	width: 100%
+}
+@media (max-width: 768px)
+{
+    .picture .pic-pic,.pic-pic2{
+    	width: 30%;
+    	margin-right: 0;
+    }
+    .picture .pic-line{
+    	margin-left: 5%;
+    }
+    .picture .p-top h4{
+    	font-size: 16px;
+    }
+    .t-title h3{
+    	font-size: 16px;
+    }
+    .problem h2{
+    	font-size: 16px;
+    }
+    .pro-title{
+    	padding-left: 30%;
+    	padding-right: 30%;
+    }
+    .problem .col-md-6{
+    	width: 100%;
+    }
+    .contact .c-left{
+    	width: 100%;	
+    }
+     .contact h2{
+     	padding-top: 0;
+     	margin-top: 0;
+     }
+     .contact h3{
+     	padding-top: 0;
+     	margin-top: 0;
+     }
+     .contact h4{
+     	padding-top: 0;
+     	margin-top: 0;
+     }
+     .contact h5{
+     	padding-top: 0;
+     	margin-top: 0;
+     }
+     .c-right{
+     	width: 100%;
+     }
+     .c-right img{
+     	width: 100%;
+     }
+     .t-zuo{
+     	padding-left: 35%;
+     }
+     .t-you{
+     	padding-right: 35%;
+     }
+     .footer .bank{
+		padding-left: 0;
+		padding-right: 8px;
+     }
+     .footer .f-b{
+	padding-left: 0;
+	padding-right: 0;
+}
+}

@@ -1,0 +1,127 @@
+.article .container{
+	background: url(../images/back-2.png) round;
+	margin-top: 45px;}
+.lian{margin-left:37% ;}
+
+.row .biaodan{background-color: #fff;
+	margin-top: 46px;
+	position: relative;
+	margin-bottom: 163px;
+}
+
+.h3{color: rgb(131,63,0);
+	font-weight: bolder;
+	margin-top: 33px;
+	margin-bottom: 33px;}
+
+.form-group input{height: 58px;border-radius: 0;}
+.msdl{background-color: rgb(165,79,0);
+	color: #fff;
+	width: 22%;height: 25%;
+	position: absolute;
+	border:none;
+	border-radius: 0;
+	top:88% ;
+	left:30%;
+	font-size: 1.2vw;
+}
+.form-group{margin-bottom: 23px;}
+
+.yw{
+	background-color: rgb(238,135,135);
+	color: #fff;
+	width: 27%;height: 10.5%;
+	position: absolute;
+	border:none;
+	border-radius: 0;
+	top:32% ;
+	left:80%;
+	
+}
+.yw a{color: #fff;
+	
+	display: block;
+	
+	font-size: 1.1vw;
+	
+}
+.yw a img{height: 1.4vw;width: 1.4vw;}
+.wjmm{background-color: rgb(213,195,179);
+	
+	width: 20.4%;height: 10.2%;
+	position: absolute;
+	border:none;
+	border-radius: 0;
+	top:100% ;
+	left:-8.5%;
+}
+.wjmm a{color: #fff;font-size: 1.2vw;}
+.zc2{display: none;}
+.zc{background-color: rgb(192,221,175);
+	width:10vw;
+	margin-top: 20%;
+	border:none;
+	border-radius: 0;
+	margin-left: 2vw;
+	
+}
+.zc a{color: rgb(69,152,17);
+	
+	display: block;
+	
+	padding: 10%;
+	font-size: 1.5vw;
+}
+.zc a img{height: 1.4vw;width: 1.4vw;}
+@media screen and (max-width: 768px)
+{
+	.col-lg-3,.col-lg-3{display: none;}
+	.biaodan{width: 100%;}
+	.article .container{
+	background: url(../images/back-2.png) round;
+	margin-top: 25px;}
+	.row .biaodan{
+		position: relative;
+		margin-bottom: 60px;
+		margin-top: 15px;
+		margin-left: 1px;
+		margin-right: 1px;}
+	.wjmm{position: absolute;top: 100%;left: 0%;}
+	.lian img{height: 70px;}
+	.form-group input{height: 50px;font-size: 10px;width: 130%;}
+	.h3{margin-top: 13px;margin-bottom: 13px;font-size: 16px;}
+	label img{height: 20px;margin-top: 10px;margin-left: 5px;}
+	.yw{width: 40%;
+		position: absolute;
+		top: 32%;
+		left: 0;
+		padding: 5px;}
+	.yw a img{height: 12px;width: 12px;}
+	.dyh{margin-bottom: 40px;}
+	.wjmm{	width: 40%;
+			position: absolute;
+			border:none;
+			border-radius: 0;
+			top:90% ;
+			left:0%;
+		}
+	.msdl{	width: 40%;height: 15%;
+			position: absolute;
+			border:none;
+			border-radius: 0;
+			top:67% ;
+			left:0;
+		}
+	.zc2{	background-color: rgb(192,221,175);
+			display: block;
+			position: absolute;
+			top: 75%;
+			left:60%;
+			width:40%;
+			height: 15%;
+			border:none;
+			border-radius: 0;
+		}	
+	.zc2 a{color: rgb(69,152,17);}
+	.zc2 a img{height: 13px;width: 13px;}	
+}

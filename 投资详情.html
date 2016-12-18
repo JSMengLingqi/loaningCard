@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>投资详情</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<style>
+	  body{font-family: "微软雅黑";background-color:rgb(240,240,240); }     
+    .container{padding:0px;}
+    nav{background-color: rgb(53,59,72);margin-bottom: 0px;}
+    .navbar{border-radius: 0;}
+    .navbar-brand{padding-top: 0;}
+    .navbar-right{margin-top: 13px;}
+    .nav li a{color: rgb(221,221,221);}
+    .nav .active a{color: #fff;background-color: rgb(182,87,0);}
+    .nav li a:hover{background-color: rgb(182,87,0);color: #fff;}
+    .navbar-link{color: rgb(221,221,221);}
+    #main-nav li:hover .navbar-link{color: #fff;} 
+    .navbar-nav{margin-left: 25%;}
+    .navbar-right .btn{color: rgb(182,87,0);border-color:rgb(182,87,0);}
+    .navbar-collapse
+    {
+     line-height: 100%;height: 100%;
+    }
+    @media screen and (max-width: 1200px)
+    {
+     .navbar-nav{margin-left: 0;}
+    }
+    .content-t{background-color:rgb(240,240,240);padding: 0px;margin:0px;}
+    .row1{margin-top: 3%;margin-left:0px;margin-right:0px; background-color:white;}
+    .cooll,.dre{padding:0 ;}
+    .shangbu{margin-top: 15%;}
+    .xiao{font-size: 1.8vw;color: rgb(106,106,106);padding-top: 4%;}
+    .er{padding-left: 0px;}
+    .jie{font-size: 14px;color: rgb(143,143,143);float: left;padding-top: 2.8%;}
+    .jie a{font-size: 1.8vw;text-decoration: none;color: rgb(106,106,106);font-weight: bold;}
+    #yuan{color: rgb(214,106,8);}
+    #shi{color: rgb(77,197,0);}
+    .jiee{padding: 0;margin-left: 2%;}
+    .jiee h6{font-size: 14px;color: rgb(143,143,143);margin-top: 3%;}
+    .jiee p{font-size: 14px;color: rgb(189,189,189);margin-top: 2%;}
+    .contr{background: url(images/queren.png) no-repeat;position: relative;top:-20px;left:1.6%;padding:0px;}
+    .dong{padding-left: 10%;padding-top: 5%;font-size: 14px;color: rgb(255,193,193);font-weight: bold;}
+    .dong img{padding-right: 3%;}
+    .dong .btn{background-color: rgb(255,231,185);height: 15%;width: 18%;border:none;color: rgb(226,94,94);font-size: 14px;display: inline-block;margin-left: 25%;}
+    .contr h4{font-size: 1.4vw;font-weight: bold;color: rgb(255,240,0);margin-left: 5%;border-bottom:1px solid #E0DFDF;padding-left: 5%;width: 89%;height: 50px;}
+    .ba{padding-top: 5%; background:url(images/banshi.png) no-repeat 15% 100%;padding-left: 40%;font-size: 14px;font-weight: bold;color: rgb(255,193,193);}
+    .ba span{font-size:1.6vw;color: rgb(255,241,241); line-height: 60px;}
+    .zui{padding-left: 10%;}
+    .zui .btn{background-color:rgb(255,247,247);font-size: 1.6vw;color: rgb(205,205,205); padding-left: 5%;text-align:left;width:87%;padding-top: 4%;padding-bottom: 4%;}
+    .shou{padding-left: 10%;font-size: 14px;color: rgb(255,231,185);}
+    .que{padding-left: 10%;}
+    .que .btn{width:87%;background-color: rgb(255,222,0);font-size: 1.6vw;color: rgb(220,84,84);padding-top: 4%;padding-bottom: 4%;}      
+    .content-b{padding: 0px;margin-top: 5%;}
+    .row2e{padding:0px;}
+    .row2{background-color: rgb(233,233,233);margin:0px;}
+    .qing{padding: 0px;background-color: rgb(233,233,233);}
+    .jth{line-height: 50px;font-size: 1.6vw;font-weight: bold;height: 50px;}
+    .jth a{text-decoration: none;font-size: 1.5vw;color: rgb(140,140,140);height: 60px;display: inline-block;width:165px;}
+    .jth a:hover{color: rgb(214,106,8);background-color: white;}
+    #huan{color: rgb(214,106,8);background-color: white;}
+    .content-b-b{padding:0px;background-color: white;}
+    .toet{padding-top: 2%;}
+    .ge{font-size: 1.4vw;color: rgb(214,106,8);padding-left: 5%;font-weight: bold;}
+    .ren{border-right: 1px solid #ccc;}
+    .renb{margin-top: 7%;}
+    .xing{font-size: 13px;color: rgb(111,111,111);margin-top:15%;}
+    .xingn{margin-top: 25%;}
+    .gua{font-size: 13px;color: rgb(149,149,149);}
+    .gua span{margin-left: 20%;}
+    .tou{font-size: 13px;color: rgb(214,106,8);font-weight: bold;}
+    .zhi{margin-top: 4%;}
+    .di{font-size: 1.4vw;font-weight: bold;color: rgb(214,106,8);margin-left: 3%;padding-top:3%;}
+    .row7{margin-left: 3%;margin-right: 3%;border:1px solid #ccc;}
+    .hya{padding-top: 3%;padding-bottom: 2%;margin-bottom: 0px;}
+    .wu{padding-top:20%;padding-bottom: 27%;font-size: 14px;font-weight: bold;color: rgb(68,68,68);padding-left: 6%;}
+    .miao{background-color: rgb(245,245,245);border-right: 1px solid #ccc;}
+    .rtx{padding:0px;}
+    .hya{font-size: 13px;color: rgb(149,149,149);}
+    .rtxd{border-bottom: 1px solid #ccc;}
+    .feng{background-color: rgb(245,245,245);padding-top:50%;padding-bottom: 55%;font-size: 14px;font-weight: bold;color: rgb(68,68,68);s}
+    .zhai{font-size: 13px;color: rgb(149,149,149);padding-top: 0.25%;margin-top: 1%;line-height: 20px;}
+    .rog{background-color:white;margin-left: 0px;margin-right: 0px;}
+    .pian{font-weight: bold;font-size:1.4vw;color: rgb(214,106,8);padding-top: 4%;margin-left: 2%;}
+    .mian{margin-top: 1.5%;margin-left: 2%;}
+    .zheng{font-size: 13px;color: rgb(103,103,103);}
+    .rof{margin-left: 0px;margin-right: 0px;padding-bottom: 4%;}
+    .dier{margin-bottom: 33px;}
+    .h4{margin-top: 30px;margin-bottom: 17px;}
+    .hezuo{background-color: rgb(53,59,72);border-bottom:1px solid rgb(71,77,89);width: 100%;}
+    .col-hz-1{width: 14%; padding-left: 15px; padding-right: 15px;float: left;}
+    .col-hz-1 img{width: 100%;height: 44px;}
+    .col-hz-1 img{border-radius: 4px;opacity: 0.3;}
+    .col-hz-1:hover img{opacity: 1;}
+    .bank1{padding-left: 0;}
+    .bank7{padding-right: 0;}
+    .footer{background-color:rgb(53,59,72);}
+    .footr{padding-top: 33px;padding-bottom: 33px;}
+    .footr img{margin-left: -15px;height: 65px;}
+    .foote{margin-top: 33px;font-size: 12px;}
+    .foote p{font-size: 1.2vw;}
+    .btn-group4{position: relative;left: 5%;top: 30px;display: none;}
+    @media screen and (max-width: 768px)
+    {
+     .navbar-brand img
+    {
+        width: 90px;
+        height: 80px;
+    }
+     .navbar-nav
+     {
+        margin-left: 0;
+      }
+    /*借款简介*/
+     .cooll{width: 100%;}
+     .dre{width: 100%;margin-left: 6%;}
+     .xiao1{font-size: 6px;width: 100%;margin-left: 5%;padding: 0px;}
+     .jiee{width: 90%;font-size: 6px;margin-left: 9%;}
+     .contr{width: 92%;margin-top: 10%;margin-left: 0px;}
+     .dong .btn{margin-left: 0px;margin-left: 20%;}
+     .contr h4{margin-left: 0%;margin-left: 8%;height:30px;}
+     .ba{padding-left: 50%;}
+     .zui .btn{width: 95%;}
+     .que .btn{width: 95%;}
+    /*借款简介*/
+    /*借款详情*/
+     .row2{display: none;}
+     .btn-group4{display: block;}
+     .content-b{margin-top: 0px;}
+     .content-b-b{padding-top: 30%;}
+     .btn-war{color: rgb(214,106,8);background-color: white;}
+     .btn:hover{color: rgb(214,106,8);background-color: white;}
+    /*借款详情*/
+   /* 个人信息*/
+     .renb-1{width:100%;}
+     .renb-2{padding: 0px;}
+     .xinf1{padding: 0px;}
+     .xing{font-size: 6px;}
+    /* 个人信息*/
+    /*最新投资*/
+     .renb-3{display: none;}
+     .xinf11{font-size: 4px;width: 100%;padding: 0px;}
+     .gua span{margin:0px;margin-left: 10%;}
+    /*最新投资*/
+    /*抵押物信息描述*/
+     .miao{width: 100%;}
+     .wu{padding: 0px;font-size: 4px;}
+     .feng{padding: 0px;font-size: 4px;}
+     /*抵押物信息描述*/
+     /*抵押物照片*/
+     .rogr1{width:80%;margin-left: 5%;}
+     .rof{display: none;}
+    /*抵押物照片*/
+    /*合作银行*/
+     .col-hz-1{padding-left: 5px;padding-right: 5px;}
+     .col-hz-1 img{width: 100%;height: 20px;}
+     .bank1{padding-left: 0;}
+     .bank7{padding-right: 0;}
+     .col-hz-1 img{border-radius: 1px;}  
+     .dier{margin-bottom: 13px;}
+     .h4{margin-top: 10px;margin-bottom: 7px;font-size: 12px;}
+    /*合作银行*/
+    /*页脚*/
+     .foote p{display: none;}
+     .footr{padding-top: 10px;padding-bottom: 10px;}
+     .footr img{height: 30px;margin-left: -15px;}
+    /*页脚*/
+    }
+	</style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <!-- logo start -->
+       <div class="navbar-header">
+           <a class="navbar-brand" href="" style="padding-top: 10px;">
+            <img src="images/headpic2.png" >
+           </a>
+           <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+            <span class="glyphicon glyphicon-menu-hamburger">
+            </span>
+           </button>
+        </div>
+        <!-- logo end -->            
+        <!-- nav start -->
+       <div id="main-nav" class="collapse navbar-collapse">
+         <ul class="nav navbar-nav">
+          <li>
+           <a href="首页.html">首页</a>
+          </li>
+          <li class="active">
+           <a href="">投资项目</a>
+          </li>
+          <li>
+           <a href="我要借款.html">我要借款</a>
+          </li>
+          <li>
+           <a href="关于我们.html">关于我们</a>
+          </li>
+          <li>
+           <a href="新闻公告.html">新闻公告</a>
+          </li>
+         </ul>
+         <ul class="list-unstyled list-inline navbar-right">
+          <li>
+           <img src="images/head-pic2.png" alt="">
+          </li>
+          <li>
+           <a href="登录.html" class="navbar-link">安全登录</a>
+          </li>
+          <li>
+           <a href="注册.html" class="btn btn-md btn-default">注册
+           </a>
+          </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+<div class="content-t">
+  <div class="container">
+	 <div class="row row1">
+	  <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 cooll">
+	   <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+	    <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4 dre">
+	     <img src="images/fangwu.png" height="86%" width="86%"alt="" class="shangbu">
+       </div>
+       <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 xiao1">
+        <h1 class="xiao">小银票3430，稳定高收益，放心理财首选</h1>
+       <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6 er">
+        <p class="jie">借款金额<br/>
+         <a href="" id="yuan">50000000.00元</a>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6 ">
+        <p class="jie">预计年化收益率<br/>
+         <a href="" id="shi">19.00%</a>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6 er">
+        <p class="jie">借款期限<br/>
+         <a href="">3个月</a>
+        </p>
+       </div>
+       <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6 ">
+        <p class="jie">还款方式<br/>
+         <a href="">付息还本</a>
+        </p>
+       </div>
+      </div>   
+     </div>
+      <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 jiee">
+       <h6>借款简介</h6>
+	     <p>新手投资团是点融网针对P2P投资新手设立的P2P投资学校，团员可以在这里免费学习体验P2P投资。加入新手团的资金将优
+        先于个体投资的资金，高度分散地投资平台现有各类借款标的。点融网已注册用户可随时加入新手投资团并。</p>
+     </div>
+    </div>
+    <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4 contr">
+     <h6 class="dong">
+      <img src="images/luot.png" alt="">
+      <span>您好！东厂胡一刀</span>
+      <button type="button" class="btn btn-block">充值
+      </button>
+     </h6>
+	   <h4>可用余额：2,547,863.00元</h4>
+	   <h6 class="ba">可投资金额<br/>
+      <span>2,548,763.00元</span>
+     </h6>
+	   <p class="zui">
+      <button type="button"class="btn btn-block ">最少投资100元</button>
+     </p>
+	   <h6 class="shou">可收益:0.00元</h6>
+	   <p class="que">
+      <button type="button"class="btn btn-block ">确认投资
+      </button>
+     </p>
+    </div>
+   </div>
+ </div>
+</div>
+<div class="btn-group btn-group4">
+  <button type="button" class="btn btn-default btn-war">借款详情</button>
+  <button type="button" class="btn btn-default ">投资记录</button>
+  <button type="button" class="btn btn-default ">还款方案</button>
+</div>
+<div class="content-b">
+  <div class="container">
+   <div class="row row2">
+	  <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 row2e ">
+	   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4  qing text-center">
+	    <p class="jth">
+       <a href=""  id="huan">借款详情</a>
+      </p>
+	   </div>
+       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4  qing text-center">
+        <p class="jth">
+         <a href="投资记录.html">投资记录</a>
+        </p>
+       </div>
+       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4  qing text-center">
+        <p class="jth">
+         <a href="还款方案.html">还款方案</a>
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="content-b-b">
+      <div class="row toet">
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb-1">
+ 	      <h5 class="ge">个人信息</h5>
+ 	     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb ">
+ 	      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb-2"> 
+ 		     <img src="images/ren.png"  height="80%" width="80%"alt="">
+ 	      </div>
+ 	      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  xinf1">
+ 		     <p class="xing">性别：男</p>
+ 		     <p class="xing">年龄：45</p>
+        </div>
+ 	    </div>
+ 	     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb">
+ 	      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb-2"> 
+ 		     <img src="images/daohang.png"  height="80%" width="80%"alt="">
+ 		    </div>
+ 	      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 xinf1">
+ 		     <p class="xing">户籍：上海</p>
+ 		     <p class="xing">现居：江苏盐城</p>
+ 	      </div>
+ 	     </div>
+ 	     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb">
+ 	      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb-2"> 
+ 		     <img src="images/xi.png"  height="80%" width="80%"alt="">
+ 		    </div>
+ 	      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 xinf1">
+ 		     <p class="xing">婚姻：已婚</p>
+ 		     <p class="xing">子女：无</p>
+ 	      </div>
+ 	     </div>
+ 	     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb">
+ 	      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb-2"> 
+ 		     <img src="images/benke.png"  height="80%" width="80%"alt="">
+ 	      </div>
+ 	      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 xinf1">
+ 	       <p class="xingn xing">学历：本科</p>
+        </div>
+       </div>
+      </div>
+     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 renb-1">
+ 	    <h5 class="ge">最新投资</h5>
+ 	   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 zhi">
+ 	    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 renb-3">
+ 		   <img src="images/bai.png" height="85%" width="85%" alt="" class="baj">
+ 	    </div>
+ 	    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8  xinf11">
+ 		   <p class="gua">东厂胡**<span>50分钟前</span></p>
+ 		   <p class="tou ">投资了2,547,863.00元</p>
+ 	    </div>	
+ 	   </div>
+ 	   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 zhi" >
+ 	    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 renb-3">
+ 	     <img src="images/bai.png" height="85%" width="85%" alt="" class="baj">
+ 	    </div>
+ 	   <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8  xinf11">
+ 	    <p class="gua">东厂胡**<span>50分钟前</span></p>
+ 	    <p class="tou">投资了2,547,863.00元</p>
+ 	   </div>	
+ 	  </div>
+ 	  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 zhi">
+ 	   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 renb-3">
+ 	    <img src="images/bai.png" height="85%" width="85%" alt="" class="baj">
+ 	   </div>
+ 	   <div class="col-xs-8 col-sm-8 col-md-8  xinf11">
+ 	    <p class="gua">东厂胡**<span>50分钟前</span></p>
+ 	    <p class="tou">投资了2,547,863.00元</p>
+ 	   </div>	
+ 	  </div>
+ 	  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 zhi">
+ 	   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 renb-3">
+ 		  <img src="images/bai.png" height="85%" width="85%" alt="" class="baj">
+ 	   </div>
+ 	   <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8  xinf11">
+ 		  <p class="gua">东厂胡**<span>50分钟前</span></p>
+ 		  <p class="tou">投资了2,547,863.00元</p>
+ 	   </div>	 
+ 	 </div>
+ 	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 zhi">
+ 	  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 renb-3">
+ 		 <img src="images/bai.png" height="85%" width="85%" alt="" class="baj">
+ 	  </div>
+ 	  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8  xinf11">
+ 		 <p class="gua">东厂胡**<span>50分钟前</span></p>
+ 		 <p class="tou">投资了2,547,863.00元</p>
+ 	  </div>	
+ 	 </div>
+ 	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 zhi">
+ 	  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 renb-3">
+ 		 <img src="images/bai.png" height="85%" width="85%" alt="" class="baj">
+ 	  </div>
+ 	  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8  xinf11">
+ 	   <p class="gua">东厂胡**<span>50分钟前</span></p>
+ 		 <p class="tou">投资了2,547,863.00元</p>
+ 	  </div>	
+ 	 </div>
+  </div>
+ </div>
+<!-- 第二 -->
+   <div class="row">
+ 	  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+ 	    <h6 class="di">抵押物信息描述</h6>
+ 	  </div>
+   </div>
+   <div class="row row7">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rtx rtxd">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2  text-left miao miaow">
+        <h6 class="wu">抵押物的描述</h6>
+      </div>
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <p class="hya">抵押物位于上海某区镇中心位置，该处为上海某国际建材家居品牌展销中心，是上海通往江苏、浙江的必经之地，区内道路与多条国道和高速公路贯 通连接，交通条件优越。依托此处优越的交通条件及公路网络的建设，吸引了大批国际知名品牌建材商的入驻和投资，并建设有多处旗舰展区。现该中心商铺已全部出租，年租金回报率在5%以上。</p>
+      </div>
+     </div>
+     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rtx rtxd">
+       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2  text-left miao miaow">
+        <h6 class="wu">借款用途</h6>
+       </div>
+       <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <p class="hya">该集团是集物业管理、星级酒店、商业运营、休闲娱乐、家居建材贸易等多元化产业为一体的综合性企业。企业核心团队具有丰富的建材、装饰、商贸等大型市场的运作经验，名下有多家子公司，业务遍及国内各地及东南亚大部分地区。</p>
+       </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rtx rtxd">
+       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2  text-left miao miaow">
+        <h6 class="wu">借款用途</h6>
+       </div>
+       <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <p class="hya">借款人为该集团公司核心股东和高级管理人员，集团业务遍及国内和东南亚大部分地区，集团及名下子公司经营发展稳定，还款来源有保障。</p>
+       </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rtx">
+       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2  text-left miao">
+        <h6 class="feng">风险控制及防范措施</h6>
+       </div>
+       <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <p class="zhai">1.借款方在上海东方公证处与我方办理了借款合同公证并赋予了强制执行效力，可直接申请法院强制执行。</p>
+        <p class="zhai">2.抵押物已在所在地办理了他项权证。</p>
+        <p class="zhai">3.该借款人的征信报告良好，无不良拖欠记录，每月有缴纳社保记录显示，近期无逾期记录，相关银行资金流水正常。</p>
+        <p class="zhai">4.借款人、借款人配偶、集团公司法人及其全部股东名下的资产为此次借款做连带责任担保。 </p>
+        <p class="zhai">5.加强贷后管理，随时提示借款人谨慎经营，及时掌握借款人公司的经营状况，确保资金绝对安全，同时关注抵押物的完整情况。如发现资金被挤占挪用，即采取提前收回借款的措施；该借款人收入来源稳定，该笔借款风险较小，抵押物变现能力较强，如发生逾期或风险</p>
+       </div>
+      </div>
+     </div>
+<!-- 第二 -->
+<!-- 第三 -->
+     <div class="row rog">
+ 	   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rogr ">
+ 		  <h6 class="pian ">抵押物照片</h6>
+ 	   </div>
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2  text-center mian rogr1">
+ 	    <img src="images/fangwuzhengmian.png" height="106%" width="106%"alt="" >
+ 	    <h6 class="zheng">房屋正面照片</h6>
+ 	   </div>
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center mian rogr1">
+ 	    <img src="images/fangwucemian.png" height="106%" width="106%"alt="" >
+ 	    <h6 class="zheng">房屋侧面照片</h6>
+ 	   </div>
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center mian rogr1">
+ 	    <img src="images/hetong.png" height="106%" width="106%"alt=""  >
+ 	    <h6 class="zheng">合同</h6>
+ 	   </div>
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center mian rogr1">
+ 	    <img src="images/shengfeiz.png" height="106%" width="106%"alt="" >
+ 	    <h6 class="zheng">身份证</h6>
+ 	   </div>
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center mian rogr1">
+ 	    <img src="images/fangcanzheng.png" height="106%" width="106%"alt="" >
+ 	    <h6 class="zheng">房产证</h6>
+ 	   </div>
+ 	  </div>
+ 	  <div class="row rof">
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2  text-center mian">
+ 	    <img src="images/fangwuzhengmian.png" height="106%" width="106%"alt="" >
+ 	    <h6 class="zheng">房屋正面照片</h6>
+ 	   </div>
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center mian ">
+ 	    <img src="images/fangwucemian.png" height="106%" width="106%"alt="" >
+ 	    <h6 class="zheng">房屋侧面照片</h6>
+ 	   </div>
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center mian ">
+ 	    <img src="images/hetong.png" height="106%" width="106%"alt="" >
+ 	    <h6 class="zheng">合同</h6>
+ 	   </div>
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center mian ">
+ 	    <img src="images/shengfeiz.png" height="106%" width="106%"alt="" >
+ 	    <h6 class="zheng">身份证</h6>
+ 	   </div>
+ 	   <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center mian ">
+ 	    <img src="images/fangcanzheng.png" height="106%" width="106%"alt="" >
+ 	    <h6 class="zheng">房产证</h6>
+ 	   </div>
+ 	  </div>
+<!-- 第三 -->
+   </div>
+  </div>
+</div>
+<div class="hezuo">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <h4 class="h4">合作伙伴</h4>
+    <div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 dier">
+      <div class="col-hz-1 bank1">
+       <a href="">
+        <img src="images/bank1.png" alt="" />
+       </a>
+      </div>
+      <div class="col-hz-1 bank2">
+       <a href="">
+        <img src="images/bank2.png" alt="" />
+       </a>
+      </div>
+      <div class="col-hz-1 bank3">
+       <a href="">
+        <img src="images/bank3.png" alt="" />
+       </a>
+      </div>
+      <div class="col-hz-1 bank4">
+       <a href="">
+        <img src="images/bank4.png" alt="" />
+       </a>
+      </div>
+      <div class="col-hz-1 bank5">
+       <a href="">
+        <img src="images/bank5.png" alt="" />
+       </a>
+      </div>
+      <div class="col-hz-1 bank6">
+       <a href="">
+        <img src="images/bank6.png" alt="" />
+       </a>
+      </div>
+      <div class="col-hz-1 bank7">
+       <a href="">
+        <img src="images/bank7.png" alt="" />
+       </a>
+      </div>
+     </div>    
+    </div>    
+   </div>    
+  </div>
+ </div>    
+</div>
+<div class="footer">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 footr">
+      <a  href="">
+        <img src="images/foot.png" />
+      </a>
+     </div>
+     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 text-right foote">
+       <p>Copyright @ 2014 上海XX金融信息服务有限公司版权所有 mingchedai.com All Right Reserved</p>
+       <p>沪ICP备14044994号-1</p> 
+     </div>
+    </div>
+   </div>
+ </div>
+</div>
+<!-- [if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+<![endif]-->
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
